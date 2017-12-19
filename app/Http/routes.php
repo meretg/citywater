@@ -30,9 +30,11 @@ Route::get('deleteContactPerson/{id}','clientContactPersonController@deleteConta
 Route::get('createActivity/{type}/{status}/{textInput}/{comments}','activityController@createActivity');
 Route::get('showActivity/{id}','activityController@showActivity');
 Route::get('showclientActivity','activityController@showclientActivity');
-
+/*RFQ*/
 Route::get('createRFQ/{type}/{status}/{RFQ_description}/{clientId}','RFQController@createRFQ');
 Route::get('showRFQ','RFQController@showRFQ');
+Route::get('deleteRFQ/{id}','RFQController@deleteRFQ');
+Route::get('updateRFQ/{id}/{serial}/{type}/{status}/{RFQ_description}/{clientId}','RFQController@updateRFQ');
 /*Quotation*/
 Route::get('showQuotation/{id}','QuotationController@showQuotation');
 Route::get('deleteQuotation/{id}','QuotationController@deleteQuotation');

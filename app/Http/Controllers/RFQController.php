@@ -91,5 +91,14 @@ public function generateSerial($id){
       $RFQ->save();
       return json_encode(true);
 
+
 }
+public function deleteRFQ(Request $request){
+
+$RFQ=RFQ::findOrFail($request->id);
+
+$RFQ->delete();
+return json_encode(true);
+}
+
 }
